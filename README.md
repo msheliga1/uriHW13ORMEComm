@@ -1,6 +1,7 @@
 # E-commerce Back End Starter Code MJS   
 uri bootcamp HW 13 ORM Sequalize E-Commerce Back End MJS 2.26.24   
-Michael Sheliga - This repo is for the University of Richmond (URI) coding bootcamp.   
+Michael Sheliga - This repo is for the University of Richmond (URI) coding bootcamp.  
+Starter Code from: https://github.com/coding-boot-camp/fantastic-umbrella   
 
 ## Link to Repo, Screenshot(s) and/or Video(s)  
 Link to GitHub Repo: https://github.com/msheliga1/uriHW13ORMEComm     
