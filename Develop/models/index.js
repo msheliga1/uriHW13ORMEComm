@@ -15,15 +15,36 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 
+// Sequelize website example
+// const User_Profile = sequelize.define('User_Profile', {
+//   selfGranted: DataTypes.BOOLEAN
+// }, { timestamps: false });
+// User.belongsToMany(Profile, { through: User_Profile });
+// Profile.belongsToMany(User, { through: User_Profile });
+
+// The Super Many-to-Many relationship
+// User.belongsToMany(Profile, { through: Grant });
+// Profile.belongsToMany(User, { through: Grant });
+// User.hasMany(Grant);
+// Grant.belongsTo(User);
+// Profile.hasMany(Grant);
+// Grant.belongsTo(Profile);
+// Per //stackoverflow.com/questions/22958683/how-to-implement-many-to-many-association-in-sequelize 
+// we seem to need to use "through". 
+
+// Could not find an in-class example of this many-to-many, but per sequelize, the comment and SO, the 
+// use of "through" seems mandatory. MJS 2.26.24
 // Products belongToMany Tags (through ProductTag)
-Product.hasOne(Tag, {
-  foreignKey: 'product_id',
-  onDelete: 'CASCADE',
+Product.belongsToMany(Tag, {
+  through: 'ProductTag', 
+  foreignKey: 'product_id', // per stackOverflow
+  // onDelete: 'CASCADE',
 });
 
 // Tags belongToMany Products (through ProductTag)
-Tag.belongsTo(Product, {
-  foreignKey: 'product_id',
+Tag.belongsToMany(Product, {
+  through: 'ProductTag', 
+  foreignKey: 'tag_id',  // also per stackOverflow
 });
 
 // Driver.hasOne(License, {
