@@ -27,6 +27,13 @@ const tagData = [
   },
 ];
 
-const seedTags = () => Tag.bulkCreate(tagData);
+const seedTags = () => {
+  console.log('\n----- MJS TAGS SEEDING-----\n');
+  console.log('tagData is ' + tagData);  // gives 8 (correct) objects
+  for (const td of tagData) {
+    console.log(td);   // display proper data
+  }
+  Tag.bulkCreate(tagData);
+}
 
 module.exports = seedTags;

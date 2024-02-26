@@ -57,12 +57,15 @@ Use node, SQL and sequalize to create a back-end for an e-commerce site.
 ## Tools and Technologies Used   
     Github - Branches not needed, but could use.  
         - GitIgnore to keep NPM libraries out of gitHub repo.  
-    NPM - Node Package Manager  
+    NPM - Node Package Manager  (package.json)
         fs - fileSystem    
         inquirer - Used for prompts (text, list, checkboxes, editor, etc.)   
+        dotenv - for secure db password
+        mysql2 - dont forget the 2
+        express - ORM
+        sequelize - avoid rewriting common SQL queries
     mySQL - install is from the DEVIL!
     SQL - Standard Query Language 
-    sequelize - Include an ORM and common sql methods.  
     Insomnia - Used for testing routes
     Agile - Try to assign a little work at a time.   
 
@@ -71,9 +74,34 @@ Use node, SQL and sequalize to create a back-end for an e-commerce site.
 SQL DB with categories, products and tags.   
 
 Express.js API - add my db name, username, and password to environment variables
-Connect to a database using Sequelize
 Enter schema and seed commands
+    - mysql login, source db\schema.sql
+    - npm run seed OR node seeds\index.js (from Develop dir using cmd tool)
+Connect to a database using Sequelize  
+
 Invoke the application => server is started and the Sequelize models are synced to the MySQL database
 Insomnia Core API GET routes for all categories, products, or tags - data displayed in a formatted JSON
 Insomnia Core API GET by ID routes for one category, product, or tag - data displayed in a formatted JSON
 Insomnia Core API POST, PUT, and DELETE routes - successfully create, update, and delete db data 
+  
+Tables  - It took me over a (EF(F$)) ING hour to figure out that YOU intend ME to create these.   
+Why can't you get someone who can create clear, complete, concise directions. IT'S LIKE THIS EVERY HW!  
+-------------  
+Category
+    id Integer     NOT null    primary key    auto increment
+    category_name    String    NOT null
+Product
+    id    Integer    NOT null    primary key    auto increment
+    product_name    String    NOT null
+    price    Decimal    NOT null   Validates that the value is a decimal
+    stock    Integer    NOT null    default value 10    Validates value is numeric
+    category_id    Integer    References the category model's id
+Tag
+    id    Integer    Doesn't allow null values    Set as primary key    Uses auto increment
+    tag_name    String
+ProductTag
+    id    Integer    Doesn't allow null values    Set as primary key    Uses auto increment
+    product_id    Integer    References the product model's id
+    tag_id    Integer    References the tag model's id
+
+
