@@ -36,14 +36,14 @@ Category.hasMany(Product, {
 // use of "through" seems mandatory. MJS 2.26.24
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
-  through: 'ProductTag', 
-  foreignKey: 'product_id', // per stackOverflow
+  through: ProductTag,      // do NOT use 'ProductTage' here - no quotes.
+  foreignKey: 'product_id', // per stackOverflow - MIGHT be able to get rid of, but better to have just in case.
   // onDelete: 'CASCADE',
 });
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
-  through: 'ProductTag', 
+  through: ProductTag, 
   foreignKey: 'tag_id',  // also per stackOverflow
 });
 

@@ -6,7 +6,6 @@ const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-
 // id    Integer    NOT null    primary key    auto increment
 // product_name    String    NOT null
 // price    Decimal    NOT null   Validates is decimal
