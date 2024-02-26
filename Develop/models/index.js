@@ -47,6 +47,7 @@ Tag.belongsToMany(Product, {
   foreignKey: 'tag_id',  // also per stackOverflow
 });
 
+// One-to-One Example (not needed for this project)
 // Driver.hasOne(License, {
 //  foreignKey: 'driver_id',
 //  onDelete: 'CASCADE',
