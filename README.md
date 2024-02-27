@@ -5,9 +5,9 @@ Starter Code from: https://github.com/coding-boot-camp/fantastic-umbrella
 
 ## Link to Repo, Screenshot(s) and/or Video(s)  
 Link to GitHub Repo: https://github.com/msheliga1/uriHW13ORMEComm     
+Link to Video on Google Drive: https://drive.google.com/file/d/15i1SyN7UNKhFnAYD3HnOhx8d3yip52xh/view   
 <!---  Link to deployed github.io site. https://msheliga1.github.io/uriHW9NodeReadmeGen --->  
 <!-- Link to logo.svg: https://github.com/msheliga1/uriHW10OOPLogoGenerator/blob/main/examples/logo.svg  --->  
-Link to Video on Google Drive: https://drive.google.com/file/d/1NqSNz5vp7zit4KaUKGl09QM4u58gx9wA/view  
 <!-- Link to Video on GitHub [Link](./examples/hw10LogoGenSheliga.webm)   Note that this video may be too large to play in GitHub, so you will need to download and play from your computer. WindowsMediaPlayer worked for me.  -->
 
 [Link to Acceptance Criteria ](#acceptance-criteria)   
